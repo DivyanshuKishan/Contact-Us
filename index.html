@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+    <title>Contact</title>
+</head>
+
+
+<style>
+     
+     *{
+        margin:0px;
+        padding:0px;
+      }
+      
+      body{
+           background-image: url(sii.jpg);
+           background-position: bottom;
+           background-repeat: no-repeat;
+           background-size: cover;
+           height: 100vh;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+           color: white;
+           font-family: 'lato', sans-serif;
+//float: right;
+//margin-right: 90px;
+         }
+
+      .wrap{
+             background-color: rgba(0, 0, 0, 0.4);
+             padding: 30px;
+             text-align: center;
+             width: 30vw;
+            
+              
+         }
+
+      h1{
+           color: rgba(41, 171, 135);
+           font-size: 45px;
+           text-transform: uppercase;
+         }
+
+      div.form{
+           margin: 10px;
+           border-radius: 5px;
+           overflow: hidden;
+           position: relative;
+          
+       }
+
+       .txt{
+            font-size: 15px;
+            position: absolute;
+            left: 50%;
+            top: 37px;
+            color: rgb(255, 255, 255, 0);
+            transform: translate(-50%, -50%);
+            transition: .3s;
+            }
+
+        div.form:hover>.txt{
+                        position: absolute;
+                        top: 5%;
+                        color: rgb(255, 255, 255, 1);
+                        padding-top: 10px;
+                        font-size: 18px;
+                     }
+
+
+         div.form:hover>input,textarea{
+                           padding: 10px 5px;
+                           transition: .3s;
+                       }
+    
+          input,textarea{
+                          background-color: rgba(105, 105, 105, 0.6);
+                          border: none;
+                          outline: none;
+                          color: white;
+                          padding: 5px;
+                          margin-top: 25px;
+                          width: 70%;
+                          border-bottom: 1px solid #29ab87;
+                     }
+
+              input,textarea::placeholder{
+                         text-align: center;
+                              }
+
+              textarea{
+                        min-height: 80px;
+                 }
+
+         .sub-btn{
+                    display: block;
+                    color: white;
+                    font-weight: bold;
+                    background-color: rgba(41, 171, 135, 0.5);
+                    padding: 10px 15px;
+                    margin: 10px auto 0 auto;
+                    width: 50%; 
+                    border-radius: 5px;
+                    text-transform: uppercase;
+                    transition: .2s;
+                }
+
+          .sub-btn:hover{
+                        background-color: rgba(41, 171, 135, 1);
+                   }
+
+</style>
+
+
+<body>
+
+  <div class="wrap">
+    <h1>Contact Us</h1>
+    <form action="mail_handler.php" method="post" name="form" >
+         <div class="form">
+              <div class="txt">Full Name</div>
+              <input type="text" name="name" placeholder="Full Name" required>
+         </div>
+         <div class="form">
+              <div class="txt">Email</div>
+              <input type="text" name="email" placeholder="Email" required>
+         </div>
+         <div class="form">
+              <div class="txt">Phone Number</div>
+              <input type="text" name="phone" placeholder="Phone Number" required>
+         </div>
+         <div class="form">
+              <div class="txt">Message</div>
+              <textarea name="msg" placeholder="Message" required></textarea>
+         </div>
+     <input type="submit" name="submit" value="Send" class="sub-btn">
+    </form>
+
+  
+
+  </div>
+
+</body>
